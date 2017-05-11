@@ -1,0 +1,187 @@
+@font-face {
+  font-family: '2homa';
+  src: /*url('iran-sans.ttf') format('truetype'),*/
+       url('2Homa.woff') format('woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: irsans;
+  src: /*url('iran-sans.ttf') format('truetype'),*/
+       url('IRANSansWeb_Bold.woff2') format('woff');
+  font-weight: bold;
+}
+
+
+
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+body{
+  background: #fff;
+  font-family: 'irsans';
+
+}
+
+
+#main{
+  width: 80%;
+  margin: auto;
+}
+
+table{
+  
+  /*background: url("../img/faktor.jpg");*/
+  margin: auto;
+  background: #fff;
+  width: 99%;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-collapse: collapse;
+  direction: rtl;
+  font-weight: bold;
+  font-family: 'irsans';
+  text-align: center;
+
+}
+
+th{
+  border: 2px solid black;
+}
+td{
+  border: 2px solid black;
+  height: 35px;
+}
+
+
+.out{
+  width: 90%;
+  border: 2px solid black;
+  margin: auto;
+  padding-top: 1px;
+  padding-bottom:1px; 
+
+}
+
+.name{
+  font-family: 'irsans';
+  font-size: 18px;
+  width: 25%;
+}
+
+.date{
+  margin-left: 30px;
+  font-family: 'irsans';
+  width: 50%;
+}
+
+.numeric{
+  font-family: 'irsans';
+  width: 15%;
+}
+#foot-prc{
+  width: 98%;
+  height: 20px;
+  margin: auto;
+  margin-bottom: 2px;
+}
+
+#upfront{
+  
+  width: 30%;
+  direction: rtl;
+  right: 40pxl;
+  
+  
+
+}
+#upfront input{
+  width: 60px;
+
+}
+
+
+
+#lowerup{
+  width: 98%;
+  display: inline-flex;
+  direction: rtl;
+  margin: auto;
+}
+
+
+
+.al{
+  font-family: 'irsans';
+  width: 55%;
+}
+
+
+
+
+img{
+  display: block;
+  width: 90%;
+  margin: auto;
+
+}
+h4{
+  margin: auto;
+
+
+}
+
+input{
+  border-style: none;
+}
+
+
+.button{
+  display: block;
+  width: 200px;
+  height: 45px;
+  float: right;
+  margin-right: 110px;
+  text-decoration: none;
+  font-size: 20px;
+  padding-top: 5px;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow:1px 2px 0 rgba(0,0,0,0.08);
+  text-align: center;
+
+}
+
+
+
+.scr{
+  background: #18ace3;
+}
+
+.prnt{
+  background: #f1c40f;
+}
+
+
+
+.button:hover{
+  box-shadow:3px 2px 0 rgba(0,0,0,0.18);
+  transition: box-shadow 0.3s ease-out;
+  cursor: pointer;
+
+}
+
+
+footer{
+  margin-top: 50px;
+}
+
+
+
+
+

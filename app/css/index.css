@@ -1,0 +1,389 @@
+
+@font-face {
+  font-family: irsans;
+  src: /*url('iran-sans.ttf') format('truetype'),*/
+       url('IRANSansWeb_Bold.woff2') format('woff');
+  font-weight: bold;
+}
+
+#pop-ovrly{
+  width:100%;
+  height: 100%;
+  background-color: rgba(0,0,0, 0.8);
+  z-index: 1;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  /*margin-left: 251px;*/
+  top: 45px;
+  transition: opacity 600ms, visibility 600ms;
+}
+
+
+
+ 
+html{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #FFFEF9;
+  text-align: center;
+  margin: -2px -1px 0 -1px;
+  overflow-x: hidden;
+  font-family: 'irsans';
+  border-radius: 4px 4px 0 0;
+
+
+}
+
+#main{
+  margin-top: 80px;
+}
+
+.btn{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  -webkit-app-region:no-drag;
+
+
+}
+
+.btn.close{
+  margin-top: 4px;
+  right: 0;
+  margin-right: 12px;
+  opacity: 0.8;
+}
+
+.btn.max{
+  margin-top: 4px;
+  right: 0;
+  margin-right: 60px;
+  background-color: #fff;
+  border-radius: 16px;
+  opacity: 0.8;
+
+}
+
+.btn.min{
+  margin-top: 4px;
+  right: 0;
+  margin-right: 110px;
+  background-color: #fff;
+  border-radius: 16px;
+  opacity: 0.8;
+
+}
+
+.btn.navic{
+  width: 40px;
+  height: 40px;
+  top: -50px;
+  left: 0;
+  margin-left: 8px;
+  background-color: #1da7db;
+  border-radius: 25px;
+  position: absolute;
+
+
+}
+.icon.nv{
+  width: 40px;
+  height: 40px;
+}
+
+.btn.navic:hover{
+  background-color: #66e9fc;
+  transition: all 0.3s ease-out;
+}
+
+.btn.close:hover{
+  opacity: 1.2;
+}
+
+.btn.min:hover{
+  opacity: 1.2;
+}
+
+.btn.max:hover{
+  opacity: 1.2;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+  position: relative;
+
+
+}
+
+
+
+header{
+  -webkit-app-region: drag;
+  width: 100%;
+  height: 45px;
+  background: #282828;
+  box-shadow:5px 5px 0 rgba(0,0,0,0.08);
+  top: 0;
+  right: 0;
+  position: fixed;
+
+
+
+}
+
+#subheader{
+width: 100%;
+height: 35px;
+margin-top: 50px;
+position: fixed;
+}
+
+
+
+#navDrawer{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 40px;
+  left: 0;
+  background: #282828;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+
+}
+
+
+#navDrawer .nvBtns{
+  width: 100%;
+  height: 500px;
+  margin-top: 100px;
+
+}
+
+#navDrawer .nav{
+  -webkit-user-select: none;
+  width: 200px;
+  height: 20px;
+  padding: 8px 8px 25px 8px;
+  margin: 30px 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #72a3c2;
+  display: block;
+  transition: 0.3s;
+  background: #264060;
+  border-radius: 4px;
+  /*box-shadow:3px 3px 0 rgba(183, 246, 149, 0.1);*/
+
+
+}
+
+#navDrawer .nav:hover{
+  background: #314052;
+  cursor: pointer;
+
+}
+
+
+#navDrawer .cls{
+  -webkit-app-region: no-drag;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.clon{
+  visibility: hidden;
+}
+
+h1{
+
+  -webkit-user-select: none;
+  -webkit-app-region: no-drag;
+
+}
+
+.inovic {
+  width: 78%;
+  margin: 0 auto;
+
+
+
+}
+
+.inovic th{
+  background: #104871;
+  border-radius: 15px 15px 0 0 ;
+  border: solid 1px #FFFEF9;
+  height: 40px;
+  color: rgb(218, 237, 247);
+  position: sticky;
+  box-shadow:0 5px 0 rgba(0,0,0,0.08);
+
+
+
+
+}
+
+th:last-child{
+  border-collapse: separate !important;
+  box-shadow:0px 0px 0 rgba(0,0,0,0.08);
+
+}
+
+  .mainic{
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+  }
+
+ .add{
+  background: rgba(0, 0, 0, 0.0) !important;
+  width: 50px;
+  height: 40px ;
+
+
+}
+
+.rowdlt{
+  border-style: none;
+  background-color: #FFFEF9;
+
+
+}
+
+.inovic tbody{
+  color: #212125;
+  background: #fff;
+
+
+}
+
+ table{
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+ td
+{
+  border: 1px solid black;
+  height: 40px;
+}
+
+.item{
+  width: 45%;
+
+}
+
+
+.num{
+  width: 10%;
+}
+.prc{
+  width: 15%;
+}
+
+.sum{
+  width: 30%;
+}
+
+.item-srch{
+  border-style: none;
+  height: 100%;
+  width: 99%;
+  text-align: center;
+  font-family: 'irsans';
+  box-shadow: inset 0 0 2px rgba(0,0,0,0.15);
+  direction: rtl;
+  
+
+}
+
+
+.item-srch:hover, .item-srch:focus{
+  box-shadow: inset 0 0 5px rgba(35, 142, 187, 0.3);
+  outline: none;
+  font-family: 'irsans';
+  transition: all 0.3s ease-out;
+
+}
+
+.foot{
+  direction: rtl;
+  margin-top: 20px;
+
+}
+.ft-btn{
+  margin-top: 50px;
+  margin-right: 10px;
+  height: 40px;
+  text-align: center;
+  font-family: 'irsans';
+  border-style: none;
+  background: #ffffff;
+  border-radius: 5px;
+  color: #282828;
+  box-shadow:1px 2px 0 rgba(0,0,0,0.08);
+  border: 1px solid #e9e8e8;
+}
+
+.ft-btn:hover, .ft-btn:focus{
+  box-shadow:1px 2px 0 rgba(0,0,0,0.08), inset 0 0 3px rgba(40, 40, 40, 0.2);
+  outline: none;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+#export{
+  height: 300px;
+  width: 150px;
+  margin: auto;
+  display: block;
+
+
+}
+
+.exp{
+  margin-top: 50px;
+  display: block;
+  background: #388E3C;
+  width: 150px;
+  height: 45px;
+  text-decoration: none;
+  font-size: 20px;
+  padding-top: 5px;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow:1px 2px 0 rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+
+button{
+  -webkit-app-region:no-drag;
+
+}
+
+
+::-webkit-scrollbar {
+        background-color: #282828;
+        width: .8em
+}
+
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb {
+        background:  #16679d;
+
+}

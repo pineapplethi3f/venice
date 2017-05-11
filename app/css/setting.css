@@ -1,0 +1,286 @@
+
+@font-face {
+  font-family: irsans;
+  src: /*url('iran-sans.ttf') format('truetype'),*/
+       url('IRANSansWeb_Bold.woff2') format('woff');
+  font-weight: bold;
+}
+
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  min-width: 100%;
+  min-height: 100%;
+  background-color: #FFFEF9;
+  text-align: center;
+  margin: -2px -1px 0 -1px;
+  overflow-x: hidden;
+  font-family: 'irsans';
+  border-radius: 4px 4px 0 0;
+
+
+
+}
+
+header{
+  -webkit-app-region: drag;
+  width: 100%;
+  height: 45px;
+  background: #282828;
+  border-radius: 7px 7px 0px 0px;
+  box-shadow:5px 5px 0 rgba(0,0,0,0.08);
+  top: 0;
+  position: fixed;
+
+
+}
+
+
+.btn{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  -webkit-app-region:no-drag;
+
+
+}
+
+
+
+
+
+.btn.close{
+  margin-top: 4px;
+  right: 0;
+  margin-right: 12px;
+  opacity: 0.8;
+}
+
+.btn.max{
+  margin-top: 4px;
+  right: 0;
+  margin-right: 60px;
+  background-color: #fff;
+  border-radius: 16px;
+  opacity: 0.8;
+
+}
+
+.btn.min{
+  margin-top: 4px;
+  right: 0;
+  margin-right: 110px;
+  background-color: #fff;
+  border-radius: 16px;
+  opacity: 0.8;
+
+}
+
+
+.btn.close:hover{
+  opacity: 1.2;
+}
+
+.btn.min:hover{
+  opacity: 1.2;
+}
+
+.btn.max:hover{
+  opacity: 1.2;
+}
+
+.icon{
+  width: 30px;
+  height: 30px;
+  position: relative;
+
+}
+#item-list{
+margin: auto;
+width: 80%;
+}
+
+h1{
+  width: 100%;
+  margin-top: 80px;
+}
+table{
+  border-collapse: separate;
+  border-spacing: 10px 10px;
+  width: 100%;
+  direction: rtl;
+
+
+}
+
+
+th{
+  background: #104871;
+  color: #ffffff;
+  border-radius: 5px;
+  height: 45px;
+  box-shadow:1px 4px 0 rgba(0,0,0,0.08);
+
+}
+
+
+.hItem{
+  width: 70%;
+}
+
+
+
+
+td{
+  background: #ffffff;
+  border-radius: 5px;
+  color: #282828;
+  box-shadow:1px 2px 0 rgba(0,0,0,0.08);
+  border: 1px solid #e9e8e8;
+
+
+
+}
+td:focus, td:hover{
+  box-shadow:1px 2px 0 rgba(0,0,0,0.08), inset 0 0 3px rgba(40, 40, 40, 0.2);
+  outline: none;
+  transition: all 0.3s ease-out;
+
+
+}
+
+td:first-child{
+  background: rgba(255, 255, 255, 0);
+
+}
+th:first-child{
+  background: rgba(255, 255, 255, 0);
+
+}
+
+
+button{
+  -webkit-app-region:no-drag;
+
+}
+a{
+  -webkit-app-region:no-drag;
+
+}
+a:hover{
+  cursor:pointer;
+
+}
+
+footer{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  display: block;
+  
+
+}
+.opp{
+  width: 500px;
+  margin: auto;
+  display: block;
+  height: 200px;
+
+
+}
+.button{
+  display: block;
+  width: 200px;
+  height: 45px;
+  float: right;
+  margin-right: 40px;
+  text-decoration: none;
+  font-size: 20px;
+  padding-top: 5px;
+  color: #ffffff;
+  border-radius: 5px;
+  box-shadow:1px 2px 0 rgba(0,0,0,0.08);
+  
+}
+
+.button:hover{
+  box-shadow:3px 2px 0 rgba(0,0,0,0.18);
+  transition: box-shadow 0.3s ease-out;
+  cursor: pointer;
+
+}
+
+.confrim{
+  background: #388E3C;
+}
+
+.cancel{
+  background: #EF6C00;
+
+}
+
+.anch{
+  display: block;
+  width: 150px;
+  height: 45px;
+  margin-top: 70px;
+  background: #18ace3;
+  border-radius: 5px;
+  color: #ffffff;
+  padding-top: 5px;
+  font-size: 19px;
+  text-decoration: none;
+
+
+}
+
+.anch:hover{
+  box-shadow:3px 2px 0 rgba(0,0,0,0.18);
+  transition: box-shadow 0.3s ease-out
+
+}
+
+.mainic{
+  width: 35px;
+  height: 35px;
+  margin-top: 5px;
+}
+
+.add{
+ background: #FFFEF9 !important;
+ width: 50px;
+ height: 40px ;
+
+
+}
+
+#subheader{
+  width: 100%;
+
+}
+
+
+
+
+
+
+
+
+.hidden{
+  visibility: hidden;
+
+}
+::-webkit-scrollbar {
+        background-color: #282828;
+        width: .8em
+}
+
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb {
+        background:  #16679d;
+
+}

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: irsans;
+  src: /*url('iran-sans.ttf') format('truetype'),*/
+       url('IRANSansWeb_Bold.woff2') format('woff');
+  font-weight: bold;
+}
+
+.autocomplete-suggestions {
+  border: 1px solid #999;
+  background: #2a2727;
+  overflow: auto;
+  border-radius: 4px;
+  margin-top:8px;
+  font-family: 'irsans';
+  direction: rtl;
+}
+
+.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #2a2727;
+  color: #fff
+}
+
+.autocomplete-selected {
+  background: #413e3e;
+}
+
+.autocomplete-suggestions strong {
+  font-weight: normal;
+  color: #f5ba09;
+}
+
+.autocomplete-group {
+  padding: 2px 5px;
+}
+
+.autocomplete-group strong {
+  display: block;
+  border-bottom: 1px solid #ffffff;
+}

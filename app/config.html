@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/setting.css">
+    <title>Setting</title>
+  </head>
+  <body>
+    <header>
+    <a class="btn close"><svg class="icon cls"> <use xlink:href="img/icons.svg#error"/></svg></a>
+    <a class="btn max"><svg class="icon max"> <use xlink:href="img/icons.svg#null"/></a>
+    <a class="btn min"><svg class="icon min"> <use xlink:href="img/icons.svg#window"/></a>
+
+    </header>
+
+    <div class="#subheader"> <a class="anch defualt"> پیش‌فرض</a></div>
+
+    <div id="item-list">
+      <h1>لیست قیمت</h1>
+
+      <table class="items" id="list">
+        <thead class="stick">
+          <th class="add"><svg class="mainic rowadd"><use xlink:href="img/icons.svg#plus"/></<svg></th>
+          <th class="hItem">شرح</th>
+          <th class="hPrc">قیمت</th>
+        </thead>
+
+        <tbody>
+
+
+
+
+        </tbody>
+
+        <tr class="hidden">
+          <td class= "col deleteRow"><svg class= "mainic rowdltic"><use xlink:href="img/icons.svg#cancel"/></<svg></td>
+          <td class="col item" contenteditable="true"></td>
+          <td class= "col prc" contenteditable="true"></td>
+        </tr>
+      </table>
+
+
+    </div>
+
+    <footer>
+      <div class="opp">
+        <a class="button confrim">تأیید</a>
+        <a class="button cancel">انصراف</a>
+
+      </div>
+
+
+    </footer>
+
+
+
+  </body>
+
+
+
+  <!-- Insert this line above script imports  -->
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+  <!-- normal script imports etc  -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery.floatThead.js"></script>
+
+  <!-- Insert this line after script imports -->
+  <script>if (window.module) module = window.module;</script>
+<script>
+require('./js/setting.js');
+</script>
+</html>

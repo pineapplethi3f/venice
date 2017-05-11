@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/easy-autocomplete.css" />
+    <link rel="stylesheet" href="css/jQ-autocomplete.css">
+    <link rel="stylesheet" href="css/easy-autocomplete.themes.css">
+    <link rel="stylesheet" href="css/persian-datepicker-dark.css">
+    <title>veniz</title>
+  </head>
+
+
+  <body>
+    <header>
+    <a class="btn close"><svg class="icon cls"> <use xlink:href="img/icons.svg#error"/></svg></a>
+    <a class="btn max"><svg class="icon max"> <use xlink:href="img/icons.svg#null"/></a>
+    <a class="btn min"><svg class="icon min"> <use xlink:href="img/icons.svg#window"/></a>
+
+
+    </header>
+
+    <div id="pop-ovrly">
+    </div>
+
+
+    <div id="subheader">
+      <a class="btn navic"><svg class="icon nv"> <use xlink:href="img/icons.svg#bars-2"/></svg></a>
+    </div>
+
+    <div id="navDrawer">
+      <a class="back cls"><svg class= "icon nvcls"> <use xlink:href="img/icons.svg#arrows"/></svg></a>
+      <div class="nvBtns">
+        <a class="nav setting" data-name="config">تنظیمات</a>
+        <a class="nav updt" data-name="update">آپدیت</a>
+        <a class="nav about" data-name="about"> درباره توسعه دهنده</a>
+
+      </div>
+    </div>
+
+
+    <div id="main">
+
+
+      <h1>Veniz</h1>
+
+      <table class="inovic">
+        <thead>
+          <th>جمع</th>
+          <th>فی</th>
+          <th>تعداد</th>
+          <th>شرح</th>
+          <th class="add"><svg class= "mainic rowadd"> <use xlink:href="img/icons.svg#plus"/></<svg></th>
+
+        </thead>
+        <tbody class='bdy'>
+          <tr>
+            <td class="col sum" contenteditable="true"></td>
+            <td class="col prc" contenteditable="true"></td>
+            <td class="col num" contenteditable="true"></td>
+            <!-- <td class="col item" contenteditable="true">1</td> -->
+            <td class="col item"> <input class="item-srch" id='auto'/></td>
+            <td class="rowdlt"><svg class= "mainic rowdltic"><use xlink:href="img/icons.svg#cancel"/></<svg></td>
+
+          </tr>
+
+
+        </tbody>
+
+
+        <tr class="clon">
+          <td class="col sum" contenteditable="true"></td>
+          <td class="col prc" contenteditable="true"></td>
+          <td class="col num" contenteditable="true"></td>
+          <td class="con item"> <input class="item-srch" id='hd-srch' /></td>
+          <td class="rowdlt"><svg class= "mainic rowdltic"><use xlink:href="img/icons.svg#cancel"/></<svg></td>
+
+        </tr>
+      </table>
+
+    </div>
+
+
+
+
+
+	  <footer>
+      <div class="foot">
+        <input class="ft-btn" id="clnt" type="text" name="client" placeholder="آقای/خانم/شرکت">
+        <input class="ft-btn" id="datepick">
+        <input class="ft-btn" id="sumall" type="text" name="num" placeholder="جمع کل">
+
+
+
+      </div>
+
+      
+
+	  </footer>
+    <div id="export">
+        <a class="btn exp" data-name="out">ثبت</a>
+
+      </div>
+
+
+  </body>
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<!-- normal script imports etc  -->
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.autocomplete.js"></script>
+<script src="js/persian-date-0.1.8.js"></script>
+<script src="js/persian-datepicker-0.4.5.js"></script>
+<script src="js/jquery.floatThead.js"></script>
+
+
+
+
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+
+  <script>
+    require('./js/index.js');
+    require('./js/jquery.min.js');
+  </script>
+</html>

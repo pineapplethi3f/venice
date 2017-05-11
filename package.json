@@ -1,0 +1,27 @@
+{
+  "name": "venice",
+  "version": "0.1.0",
+  "description": "inovice app alfa test",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron main.js",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "author": "alirezaac",
+  "license": "ISC",
+  "build": {
+    "appId": "com.MBeans.veniz",
+    "extraResources":  ["config/"]
+  },
+  "devDependencies": {
+    "awesomplete": "^1.1.1"
+  },
+  "typeAcquisition": {
+    "include": [
+        "jquery"
+    ]
+}
+
+}
