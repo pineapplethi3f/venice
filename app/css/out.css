@@ -32,6 +32,7 @@ body{
 #main{
   width: 80%;
   margin: auto;
+  transform: scale(1.09);
 }
 
 table{
@@ -78,6 +79,8 @@ td{
   margin-left: 30px;
   font-family: 'irsans';
   width: 50%;
+  text-align: center;
+  font-size: 16px;
 }
 
 .numeric{
@@ -169,6 +172,24 @@ input{
 
 
 
+#foot{
+  width: 95%;
+  display: flex;
+  direction: rtl;
+  margin-top: 20px;
+  font-family: 'irsans';
+  visibility: hidden;
+}
+
+.debit{
+    font-family: 'irsans';
+
+}
+.sumWDeb{
+  font-family: 'irsans';
+
+}
+
 .button:hover{
   box-shadow:3px 2px 0 rgba(0,0,0,0.18);
   transition: box-shadow 0.3s ease-out;
@@ -178,8 +199,11 @@ input{
 
 
 footer{
-  margin-top: 50px;
+  margin-top: 40px;
+  margin-right: 40px;
 }
+
+
 
 
 

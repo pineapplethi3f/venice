@@ -55,25 +55,29 @@ btnNVClose.addEventListener('click', ()=>{
 let btnNVSetting = document.querySelector('.setting');
 btnNVSetting.addEventListener('click', ()=>{
   main.openWindow(btnNVSetting.attributes['data-name'].value + '.html');
-});
+},false);
 
-
+let btnNVDebit = document.querySelector('.debit');
+btnNVDebit.addEventListener('click', ()=>{
+  main.openWindow(btnNVDebit.attributes['data-name'].value + '.html');
+},false);
 
 let btnNVUpdate = document.querySelector('.updt');
 btnNVUpdate.addEventListener('click', ()=>{
-  remote.dialog.showMessageBox({title:"update", message: "در حال استفاده از آخرین نسخه هستید", buttons: ["OK"] });
-});
+  ipcRenderer.send('open-update', 'clicked');
+
+}, false);
 
 let btnNVAbout = document.querySelector('.about');
 btnNVAbout.addEventListener('click', ()=>{
   main.openWindow(btnNVAbout.attributes['data-name'].value + '.html');
-});
+},false);
 
 
 let btnExport = document.querySelector('.exp');
 btnExport.addEventListener('click', ()=>{
   main.openOut(btnExport.attributes['data-name'].value + '.html');
-});
+},false);
 
 
 // let addRow = document.querySelector('.add');
@@ -202,21 +206,47 @@ $('.sum').keyup(function(){
 });
 
 
-//
-// let options = {
-//   data: ["shit", "blah", "blah blah", "holyfrog"],
-//   list: {
-//
-// 		match: {
-// 			enabled: true
-// 		}
-// 	},
-//   theme: "plate-dark",
-//   autocompleteOff: false
-// };
-//
-//
-// $('#auto').easyAutocomplete(options);
+
+
+let debList = [
+  { value: 'حمید رحیمی', data: '2000'}
+];
+
+let debit = [
+  { value: 'حمید رحیمی', data: '2000'}
+];
+let dIdx = -1;
+
+
+ipcRenderer.on('debitreply', (event, srchData)=>{
+  
+  debit= JSON.parse(srchData);
+  var map = {
+   name: 'value',
+   id: 'data'
+};
+  let cnt = srchData.replace(/name|id/gi, (matched)=>{
+    return map[matched];
+  })
+  debList = JSON.parse(cnt);
+});
+ipcRenderer.send('getJson', 'debit');
+
+
+setTimeout(()=>{
+  $('#clnt').autocomplete({
+    lookup: debList,
+    triggerSelectOnValidInput: false,
+    autoSelectFirst: false,
+    forceFixPosition: true,
+    onSelect: function(suggestion){
+      console.log(JSON.stringify(debList));
+      console.log(suggestion.data);
+      dIdx = parseInt(suggestion.data) - 1;
+    }
+});
+}, 500);
+
 
 $(document).ready(function(){
   $('#datepick').pDatepicker({
@@ -225,6 +255,8 @@ $(document).ready(function(){
 
   });
 });
+
+
 
 //export section
 
@@ -264,11 +296,47 @@ $('.exp').click(function () {
   info['name'] = $('#clnt').val();
   info['date'] = $('#datepick').val();
   info['sumall'] = $('#sumall').val();
+  if(document.getElementById('c1').checked){
+    if(dIdx == -1){
+      let temp = {};
+      temp['id'] = debit.length + 1;
+      temp['name'] = info['name'];
+      temp['debit'] = info['sumall'];
+      debit.push(temp);
+    }else{
+      console.log(dIdx);
+      console.log(JSON.stringify(debit));
+    info['debit'] = debit[dIdx].debit;
+    debit[dIdx].debit = parseInt(info['debit']) + parseInt(info['sumall']);
+    }
+
+  }
+
+  
   data.pop();
   data.push(info);
   let expData = JSON.stringify(data);
+  let debData = JSON.stringify(debit);
   // Output the result
   console.log(expData);
+  console.log(debData);
+  
   ipcRenderer.send('export', expData);
+  ipcRenderer.send('change-debit', debData);
+  ipcRenderer.send('getJson', 'debit');
+  dIdx = -1;
+  $('#clnt').autocomplete().dispose();
+  $('#clnt').val('');
+setTimeout(()=>{
+  $('#clnt').autocomplete({
+    lookup: debList,
+    triggerSelectOnValidInput: false,
+    autoSelectFirst: false,
+    forceFixPosition: true,
+    onSelect: function(suggestion){
+      dIdx = parseInt(suggestion.data) - 1;
+    }
+});
+}, 500);
 
 });

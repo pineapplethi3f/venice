@@ -7,13 +7,14 @@ const path = require('path')
 
 
 let jsn = [];
-
+let sumWDeb = 0;
 let scrImage = Buffer.alloc(2000);
 
 //async fetch json
 ipcRenderer.on('msgReply', (event, data)=>{
+  console.log(data);
   jsn = JSON.parse(data);
-
+  sumWDeb = parseInt(jsn[jsn.length-1].debit) + parseInt(jsn[jsn.length-1].sumall); 
   console.log(jsn);
 
 
@@ -35,9 +36,19 @@ ipcRenderer.send('getJson', 'out');
 
   $('.name').val(jsn[jsn.length-1].name);
   $('.date').val(toPersianNum(jsn[jsn.length-1].date));
-  $('.numeric').val(toPersianNum(jsn[jsn.length-1].sumall));
+  $('.numeric').val(toPersianNum(jsn[jsn.length-1].sumall) + 'تومان');
 
   $('.al').val(convertNumberToString(jsn[jsn.length-1].sumall) + 'تومان');
+
+  console.log(jsn[jsn.length-1].debit);
+  if (!(jsn[jsn.length-1].debit === undefined)) {
+    document.getElementById('foot').style.visibility = 'visible';
+    $('.debit').val(toPersianNum(jsn[jsn.length-1].debit) + 'تومان');
+    $('.sumWDeb').val(toPersianNum(sumWDeb) + 'تومان');
+
+  }
+ 
+
 
 
 }, 500);
@@ -59,17 +70,24 @@ $('.button').click(function(){
 ipcRenderer.on('saved-file', (event, path) =>{
   if (path) {
     remote.BrowserWindow.getFocusedWindow().webContents.capturePage((image)=>{
-    scrImage = image.toJPEG(100);
+    scrImage = image.resize({ // resize
+          width: 1800,
+          height: 2400,
+          quality: 'best'
+        }).toJPEG(100);
     console.log(scrImage.toString());
     fs.writeFile(path, scrImage, (err) => {
       if (err) {
         console.error(err);
       }
       console.log(path);
+      $('.button').show();
+
     })
   });
     
   }
+
 
    
 });

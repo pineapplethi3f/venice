@@ -32,6 +32,7 @@
       <a class="back cls"><svg class= "icon nvcls"> <use xlink:href="img/icons.svg#arrows"/></svg></a>
       <div class="nvBtns">
         <a class="nav setting" data-name="config">تنظیمات</a>
+        <a class="nav debit"  data-name="debit">حساب مشتریان </a>
         <a class="nav updt" data-name="update">آپدیت</a>
         <a class="nav about" data-name="about"> درباره توسعه دهنده</a>
 
@@ -75,6 +76,7 @@
           <td class="con item"> <input class="item-srch" id='hd-srch' /></td>
           <td class="rowdlt"><svg class= "mainic rowdltic"><use xlink:href="img/icons.svg#cancel"/></<svg></td>
 
+
         </tr>
       </table>
 
@@ -86,10 +88,11 @@
 
 	  <footer>
       <div class="foot">
-        <input class="ft-btn" id="clnt" type="text" name="client" placeholder="آقای/خانم/شرکت">
+        <input type="checkbox" id="c1" name="cc" />
+        <label for="c1">افزودن به حساب<span></span></label>        <!--<a class="addclient"><svg class= "addC"> <use xlink:href="img/icons.svg#plus"/></a>-->
+        <input class="ft-btn" id="clnt" type="text" name="client" placeholder="آقای/خانم/شرکت" autocomplete="on">
         <input class="ft-btn" id="datepick">
         <input class="ft-btn" id="sumall" type="text" name="num" placeholder="جمع کل">
-
 
 
       </div>

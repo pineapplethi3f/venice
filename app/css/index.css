@@ -1,4 +1,7 @@
 
+
+
+
 @font-face {
   font-family: irsans;
   src: /*url('iran-sans.ttf') format('truetype'),*/
@@ -230,8 +233,9 @@ h1{
   border: solid 1px #FFFEF9;
   height: 40px;
   color: rgb(218, 237, 247);
-  position: sticky;
   box-shadow:0 5px 0 rgba(0,0,0,0.08);
+  -webkit-user-select: none;
+
 
 
 
@@ -250,17 +254,22 @@ th:last-child{
     margin-top: 5px;
   }
 
+
  .add{
   background: rgba(0, 0, 0, 0.0) !important;
   width: 50px;
   height: 40px ;
+  cursor: pointer;
 
 
 }
 
+
+
 .rowdlt{
   border-style: none;
   background-color: #FFFEF9;
+  cursor: pointer;
 
 
 }
@@ -346,6 +355,59 @@ th:last-child{
   transition: all 0.3s ease-out;
   cursor: pointer;
 }
+.addclient{
+  margin-top: 50px;
+  height: 30px;
+  -webkit-app-region:no-drag;
+  top: 10px;
+  cursor: pointer;
+  
+  
+}
+
+
+
+.addC{
+  width: 30px;
+  height: 30px;
+}
+
+
+.spn{
+  
+  font-size: 12px;
+  margin-right: -85px;
+
+}
+
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label {
+    color:#000000;
+    margin-right: -115px;
+    font-size: 16px;
+    -webkit-user-select: none;
+
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 5px 0 0;
+    vertical-align:middle;
+    background:url(check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(check_radio_sheet.png) -19px top no-repeat;
+}
+
+
+
 
 #export{
   height: 300px;

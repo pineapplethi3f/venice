@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/debit.css">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <header>
+    <a class="btn close"><svg class="icon cls"> <use xlink:href="img/icons.svg#error"/></svg></a>
+    <a class="btn max"><svg class="icon max"> <use xlink:href="img/icons.svg#null"/></a>
+    <a class="btn min"><svg class="icon min"> <use xlink:href="img/icons.svg#window"/></a>
+
+    </header>
+
+
+<div id="item-list">
+      <h1>لیست مشتریان</h1>
+
+      <table class="items" id="list">
+        <thead class="stick">
+          <th class="add" data="id" ><svg class="mainic rowadd"><use xlink:href="img/icons.svg#plus"/></<svg></th>
+          <th class="hItem" data="name">نام مشتری</th>
+          <th class="hPrc"data="debit">بدهی</th>
+        </thead>
+
+        <tbody>
+
+
+
+
+        </tbody>
+
+        <tr class="hidden">
+          <td class= "col deleteRow"><svg class= "mainic rowdltic"><use xlink:href="img/icons.svg#cancel"/></<svg></td>
+          <td class="col item" contenteditable="true"></td>
+          <td class= "col prc" contenteditable="true"></td>
+        </tr>
+      </table>
+
+
+    </div>
+
+    <footer>
+      <div class="opp">
+        <a class="button confrim">تأیید</a>
+        <a class="button cancel">انصراف</a>
+
+      </div>
+
+
+    </footer>
+
+
+
+  </body>
+
+
+
+  <!-- Insert this line above script imports  -->
+  <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+  <!-- normal script imports etc  -->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/jquery.floatThead.js"></script>
+
+  <!-- Insert this line after script imports -->
+  <script>if (window.module) module = window.module;</script>
+<script>
+require('./js/debit.js');
+</script>
+</html>
+
+  </body>
+</html>

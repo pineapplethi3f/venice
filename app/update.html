@@ -2,9 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/update.css"/>
     <title>UPDATE</title>
   </head>
   <body>
-    UPDAte
+
+
+     <header>
+    <a class="btn close"><svg class="icon cls"> <use xlink:href="img/icons.svg#error"/></svg></a>
+    <a class="btn max"><svg class="icon max"> <use xlink:href="img/icons.svg#null"/></a>
+    <a class="btn min"><svg class="icon min"> <use xlink:href="img/icons.svg#window"/></a>
+
+
+    </header>
+    
+    <img src="img/update.jpg" class="cloud"> 
+
+    <div id="update-proc">
+
+      <img src="img/ring.svg" class="load"> 
+      <h2 class="stat">. . .در حال بررسی آپدیت</h2>
+      <a class="install">خروج و نصب آپدیت</a> 
+
+    </div>
+
+    
+
   </body>
-</html>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+  <script src="js/jquery.min.js"></script>
+<script>if (window.module) module = window.module;</script>
+
+
+<script>
+    require('./js/update.js');
+</script>
+
+
+
+  
+  </html>
