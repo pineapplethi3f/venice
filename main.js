@@ -67,7 +67,7 @@ app.on('ready', ()=> {
   }
   else {
     win.loadURL(idx);
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
   }
 
   if(fRun.firstRun){
@@ -130,7 +130,7 @@ openChLog = (page) => {
 exports.openWindow = (page) => {
   let winchld = new BrowserWindow({width:900, height: 1200, frame:false});
   winchld.loadURL(cfg + page);
-  // winchld.webContents.openDevTools();
+  winchld.webContents.openDevTools();
 
 }
 
@@ -138,7 +138,7 @@ exports.openOut = (page) =>{
   let outwin = new BrowserWindow({width:800, height: 1200, frame:true, resizable:false});
   outwin.loadURL(cfg + page);
   outwin.setMenuBarVisibility(false);
-  // outwin.webContents.openDevTools();
+  outwin.webContents.openDevTools();
 
 }
 

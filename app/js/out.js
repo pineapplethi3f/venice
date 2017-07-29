@@ -29,7 +29,7 @@ ipcRenderer.send('getJson', 'out');
   for (var i = 0; i < jsn.length-1; i++) {
     $('.item').eq(i).html(toPersianNum(jsn[i].شرح));
     $('.num').eq(i).html(toPersianNum(jsn[i].تعداد));
-    $('.prc').eq(i).html(toPersianNum(jsn[i].فی).slice(0,-1));
+    $('.prc').eq(i).html(toPersianNum(jsn[i].فی));
     $('.sum').eq(i).html(toPersianNum(jsn[i].جمع));
 
   }
